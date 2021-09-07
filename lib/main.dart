@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:niori/pages/signin_page.dart';
+import 'package:niori/pages/signup_page.dart';
 import 'package:niori/pages/splash_page.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashPage(),
         '/sign-in': (context) => SignInPage(),
+        '/sign-up': (context) => SignUpPage(),
       },
     );
   }

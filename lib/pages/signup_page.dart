@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:niori/theme.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({ Key? key }) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class SignInPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Login',
+              'Registrasi',
               style: textBlackStyle.copyWith(
                 fontSize: 24,
                 fontWeight: semiBold,
@@ -22,7 +22,7 @@ class SignInPage extends StatelessWidget {
             ),
             SizedBox(height: 2,),
             Text(
-              'Sign In untuk melanjutkan...',
+              'Registrasi & Selamat Berbelanja!',
               style: textSubtitleStyle,
             )
           ],
@@ -30,9 +30,114 @@ class SignInPage extends StatelessWidget {
       );
     }
 
+    Widget nameInput(){
+      return Container(
+        margin: EdgeInsets.only(top: 40),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Nama', 
+              style: textBlackStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 50,
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              decoration: BoxDecoration(
+                color: inputColor,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/images/iclog/icon_name.png',
+                      width: 17,
+                    ),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Nama Anda',
+                          hintStyle: textSubtitleStyle,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget usernameInput(){
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Username', 
+              style: textBlackStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 50,
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              decoration: BoxDecoration(
+                color: inputColor,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/images/iclog/icon_username.png',
+                      width: 17,
+                    ),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Username Anda',
+                          hintStyle: textSubtitleStyle,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+
     Widget emailInput(){
       return Container(
-        margin: EdgeInsets.only(top: 70),
+        margin: EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -81,6 +186,7 @@ class SignInPage extends StatelessWidget {
         ),
       );
     }
+
 
     Widget passwordInput(){
       return Container(
@@ -149,7 +255,7 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           child: Text(
-            'Sign In',
+            'Sign Up',
             style: textBlackStyle.copyWith(
               fontSize: 16,
               fontWeight: medium,
@@ -166,17 +272,17 @@ class SignInPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Belum memiliki account? ',
+              'Sudah memiliki account? ',
               style: textSubtitleStyle.copyWith(
                 fontSize: 12,
               ),
             ),
             GestureDetector(
               onTap: (){
-                Navigator.pushNamed(context, '/sign-up');
-                },
+                Navigator.pop(context);
+              },
               child: Text(
-                'Sign Up',
+                'Sign In',
                 style: purpleTextStyle.copyWith(
                   fontSize: 12,
                   fontWeight: medium,
@@ -199,6 +305,8 @@ class SignInPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               header(),
+              nameInput(),
+              usernameInput(),
               emailInput(),
               passwordInput(),
               signInButton(),
