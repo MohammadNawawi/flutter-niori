@@ -241,7 +241,7 @@ class SignUpPage extends StatelessWidget {
       );
     }
 
-    Widget signInButton(){
+    Widget signUpButton(){
       return Container(
         height: 50,
         width: double.infinity,
@@ -309,7 +309,7 @@ class SignUpPage extends StatelessWidget {
               usernameInput(),
               emailInput(),
               passwordInput(),
-              signInButton(),
+              signUpButton(),
               Spacer(),
               footer(),
             ],
