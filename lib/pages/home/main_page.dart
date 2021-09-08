@@ -31,7 +31,7 @@ class _MainPageState extends State<MainPage> {
 
     Widget customBottomNav(){
       return ClipRRect(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(5)),
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
           notchMargin: 10,
@@ -59,7 +59,7 @@ class _MainPageState extends State<MainPage> {
               ),
             BottomNavigationBarItem(
               icon: Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: EdgeInsets.only(top: 20, right: 40),
                 child: Image.asset(
                     'assets/images/iclog/icon_chat.png',
                     width: 20,
@@ -70,7 +70,7 @@ class _MainPageState extends State<MainPage> {
               ),
             BottomNavigationBarItem(
               icon: Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: EdgeInsets.only(top: 20, left: 40),
                 child: Image.asset(
                     'assets/images/iclog/icon_wishlist.png',
                     width: 20,

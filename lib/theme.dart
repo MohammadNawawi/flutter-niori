@@ -12,6 +12,7 @@ Color inputColor = Color(0xffe4e4e4);
 Color textBlack = Color(0xff000000);
 Color textGray = Color(0xff999999);
 Color subtitleColor = Color(0xff504f5e);
+Color transparentColor = Colors.transparent;
 
 TextStyle textWhiteStyle = GoogleFonts.poppins(
   color: textWhite,
