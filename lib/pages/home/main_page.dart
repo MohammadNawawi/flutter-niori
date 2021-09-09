@@ -7,21 +7,19 @@ import 'package:niori/theme.dart';
 // import 'package:niori/theme.dart';
 
 class MainPage extends StatefulWidget {
-
   @override
   _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-
   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-
-    Widget cartButton(){
+    Widget cartButton() {
       return FloatingActionButton(
-        onPressed: (){},
+        onPressed: () {},
+        backgroundColor: primaryColor,
         child: Image.asset(
           'assets/images/iclog/icon_cart.png',
           width: 17,
@@ -29,7 +27,7 @@ class _MainPageState extends State<MainPage> {
       );
     }
 
-    Widget customBottomNav(){
+    Widget customBottomNav() {
       return ClipRRect(
         borderRadius: BorderRadius.vertical(top: Radius.circular(5)),
         child: BottomAppBar(
@@ -39,56 +37,56 @@ class _MainPageState extends State<MainPage> {
           child: BottomNavigationBar(
             // backgroundColor: primaryColor,
             currentIndex: currentIndex,
-            onTap: (value){
+            onTap: (value) {
               setState(() {
                 currentIndex = value;
               });
             },
             type: BottomNavigationBarType.fixed,
             items: [
-            BottomNavigationBarItem(
-              icon: Container(
-                margin: EdgeInsets.only(top: 20),
-                child: Image.asset(
+              BottomNavigationBarItem(
+                icon: Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: Image.asset(
                     'assets/images/iclog/icon_home.png',
                     width: 20,
                     color: currentIndex == 0 ? primaryColor : Color(0xff808191),
                   ),
+                ),
+                label: '',
               ),
-              label: '',
-              ),
-            BottomNavigationBarItem(
-              icon: Container(
-                margin: EdgeInsets.only(top: 20, right: 40),
-                child: Image.asset(
+              BottomNavigationBarItem(
+                icon: Container(
+                  margin: EdgeInsets.only(top: 20, right: 40),
+                  child: Image.asset(
                     'assets/images/iclog/icon_chat.png',
                     width: 20,
                     color: currentIndex == 1 ? primaryColor : Color(0xff808191),
                   ),
+                ),
+                label: '',
               ),
-              label: '',
-              ),
-            BottomNavigationBarItem(
-              icon: Container(
-                margin: EdgeInsets.only(top: 20, left: 40),
-                child: Image.asset(
+              BottomNavigationBarItem(
+                icon: Container(
+                  margin: EdgeInsets.only(top: 20, left: 40),
+                  child: Image.asset(
                     'assets/images/iclog/icon_wishlist.png',
                     width: 20,
                     color: currentIndex == 2 ? primaryColor : Color(0xff808191),
                   ),
+                ),
+                label: '',
               ),
-              label: '',
-              ),
-            BottomNavigationBarItem(
-              icon: Container(
-                margin: EdgeInsets.only(top: 20),
-                child: Image.asset(
+              BottomNavigationBarItem(
+                icon: Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: Image.asset(
                     'assets/images/iclog/icon_profile.png',
                     width: 20,
                     color: currentIndex == 3 ? primaryColor : Color(0xff808191),
                   ),
-              ),
-              label: '',
+                ),
+                label: '',
               ),
             ],
           ),
@@ -96,7 +94,7 @@ class _MainPageState extends State<MainPage> {
       );
     }
 
-    Widget body(){
+    Widget body() {
       switch (currentIndex) {
         case 0:
           return HomePage();

@@ -9,10 +9,12 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-
   @override
   void initState() {
-    Timer(Duration(seconds: 3), () => Navigator.pushNamed(context, '/sign-in'),);
+    Timer(
+      Duration(seconds: 3),
+      () => Navigator.pushNamed(context, '/sign-in'),
+    );
     super.initState();
   }
 
@@ -25,7 +27,9 @@ class _SplashPageState extends State<SplashPage> {
           height: 200,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/iclog/bag.png',),
+              image: AssetImage(
+                'assets/images/iclog/bag.png',
+              ),
             ),
           ),
         ),

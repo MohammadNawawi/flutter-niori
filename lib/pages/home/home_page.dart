@@ -2,17 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:niori/theme.dart';
 
 class HomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
-    Widget header(){
+    Widget header() {
       return Container(
         margin: EdgeInsets.only(
-          top: defaultMargin,
-          left: defaultMargin,
-          right: defaultMargin
-        ),
+            top: defaultMargin, left: defaultMargin, right: defaultMargin),
         child: Row(
           children: [
             Expanded(
@@ -26,12 +21,10 @@ class HomePage extends StatelessWidget {
                       fontWeight: semiBold,
                     ),
                   ),
-                  Text(
-                    '@naw',
-                    style: textSubtitleStyle.copyWith(
-                      fontSize: 16,
-                    )
-                  ),
+                  Text('@naw',
+                      style: textSubtitleStyle.copyWith(
+                        fontSize: 16,
+                      )),
                 ],
               ),
             ),
@@ -40,7 +33,11 @@ class HomePage extends StatelessWidget {
               height: 54,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                image: DecorationImage(image: AssetImage('assets/images/iclog/image_profile.png',),),
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/iclog/image_profile.png',
+                  ),
+                ),
               ),
             ),
           ],
@@ -48,7 +45,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget categories(){
+    Widget categories() {
       return Container(
         margin: EdgeInsets.only(
           top: defaultMargin,
@@ -134,7 +131,7 @@ class HomePage extends StatelessWidget {
                   color: transparentColor,
                 ),
                 child: Text(
-                  'Accecories',
+                  'Electronics',
                   style: textSubtitleStyle.copyWith(
                     fontSize: 13,
                     fontWeight: medium,
@@ -176,7 +173,7 @@ class HomePage extends StatelessWidget {
                   color: transparentColor,
                 ),
                 child: Text(
-                  'Accecories',
+                  'Drink',
                   style: textSubtitleStyle.copyWith(
                     fontSize: 13,
                     fontWeight: medium,
