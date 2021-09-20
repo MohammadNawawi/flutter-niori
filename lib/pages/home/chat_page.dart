@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:niori/theme.dart';
+import 'package:niori/widgets/chat_tile.dart';
 
 class ChatPage extends StatelessWidget {
   @override
@@ -19,7 +20,7 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    Widget content() {
+    Widget emptyChat() {
       return Expanded(
         child: Container(
           width: double.infinity,
@@ -27,7 +28,7 @@ class ChatPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/icon_headset.png',
+                'assets/images/iclog/icon_headset.png',
                 width: 80,
               ),
               SizedBox(
@@ -78,6 +79,26 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    return Column();
+    Widget content() {
+      return Expanded(
+        child: Container(
+          width: double.infinity,
+          color: secodaryColor,
+          child: ListView(
+            padding: EdgeInsets.symmetric(
+              horizontal: defaultMargin,
+            ),
+            children: [ChatTile()],
+          ),
+        ),
+      );
+    }
+
+    return Column(
+      children: [
+        header(),
+        content(),
+      ],
+    );
   }
 }
